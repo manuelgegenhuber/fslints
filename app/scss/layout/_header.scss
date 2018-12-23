@@ -1,0 +1,32 @@
+.header {
+    height: 80vh;
+    /*gradient with "background-image" - left is on top of right parameter*/
+    background-image: linear-gradient( to right bottom, $color-green-light-1, $color-green-dark-1), url(/app/img/dist/hero.jpeg);
+    /*gets full image in parent*/
+    background-size: cover;
+    /*so it sticks to top (good for responsivness)*/
+    background-position: top;
+    /*cut out bottom right corner of image (x y,x y, x y) - (top left, top right, bottom right, bottom left)*/
+    clip-path: polygon(0 0, 100% 0, 100% 65%, 0 90%);
+    /*so the .logo-box's position:absolute references to this container (.header)*/
+    position: relative;
+    &__logo-box {
+        position: relative;
+        top: 7rem;
+        left: 4rem;
+        border: 1px solid black;
+        display: inline-block;
+        background-color: $color-white;
+    }
+    &__logo {
+        height: 11rem;
+    }
+    &__text-box {
+        /*centering container by using position absolute and top left 50% - correct centering with transform*/
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}

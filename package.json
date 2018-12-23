@@ -1,0 +1,39 @@
+{
+    "name": "SR-redesign",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "gulp"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.1.2",
+        "@babel/plugin-proposal-class-properties": "^7.1.0",
+        "@babel/preset-env": "^7.1.0",
+        "babel-plugin-amd-namer": "0.0.1",
+        "babel-plugin-transform-modules-requirejs": "^0.1.4",
+        "browser-sync": "^2.26.3",
+        "gulp": "^4.0.0",
+        "gulp-autoprefixer": "^6.0.0",
+        "gulp-babel": "^8.0.0",
+        "gulp-changed": "^3.2.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-grep-stream": "0.0.2",
+        "gulp-htmlhint": "^2.2.1",
+        "gulp-imagemin": "^4.1.0",
+        "gulp-minify": "^3.1.0",
+        "gulp-requirejs": "^1.2.0",
+        "gulp-sass": "^4.0.2",
+        "gulp-uglify": "^3.0.1",
+        "gulp-watch": "^5.0.1",
+        "pump": "^3.0.0"
+    },
+    "dependencies": {
+        "fullpage.js": "^3.0.4",
+        "requirejs": "^2.3.6",
+        "uikit": "^3.0.0-rc.20"
+    }
+}

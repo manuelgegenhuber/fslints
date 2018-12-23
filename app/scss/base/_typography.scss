@@ -1,0 +1,40 @@
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    padding-bottom: 6rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: $default-font-family;
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 1.5rem;
+        /*apply keyfrom*/
+        animation-name: moveInLeft;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+    }
+    &--sub {
+        display: block;
+        font-size: 1.4rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        animation-name: moveInRight;
+        animation-duration: 2s;
+        opacity: 0.7;
+        margin-top: 3rem;
+    }
+}
+
+.navigation {
+    text-transform: uppercase;
+    &__desktop {
+        &.uk-navbar-item,
+        .uk-navbar-nav>li>a {
+            font-size: 14px;
+            font-family: $default-font-family;
+        }
+    }
+}

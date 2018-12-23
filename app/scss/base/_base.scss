@@ -1,0 +1,25 @@
+/*basic stuff like resets of html etc (basically settings)*/
+
+*,
+*::after,
+*::before {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: inherit;
+}
+
+
+/*root font size*/
+
+html {
+    /*if client has changed default size of browser-font - our page will adjust to that too*/
+    /*defines what 1 rem is*/
+    font-size: 60.5%;
+    /*font-size: 10px; <- so we can change other sizes from px to rem easily*/
+    /*now 1 rem = 10px*/
+}
+
+body {
+    box-sizing: border-box;
+    font-family: $default-font-family;
+}

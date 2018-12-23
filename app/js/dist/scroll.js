@@ -1,0 +1,1 @@
+"use strict";define("scroll",[],function(){var e={};return Object.defineProperty(e,"__esModule",{value:!0}),e.onScroll=function(n){window.addEventListener("scroll",function(e){n(e)})},e.anchorElement_outofView=function(e,n){window.pageYOffset>e.offsetTop+e.offsetHeight?n.style.display="block":n.style.display="none"},e});

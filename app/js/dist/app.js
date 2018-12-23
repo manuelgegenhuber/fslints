@@ -1,0 +1,1 @@
+"use strict";define("app",["domReady","scroll"],function(e,o){var n;return(0,((n=e)&&n.__esModule?n:{default:n}).default)(function(){(0,o.onScroll)(function(e){(0,o.anchorElement_outofView)(document.getElementsByClassName("header__logo-box ")[0],document.getElementsByClassName("navigation__logo-box")[0])})}),{}});

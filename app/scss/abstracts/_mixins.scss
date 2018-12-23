@@ -1,0 +1,9 @@
+@mixin clearfix {
+    /*& here is the class where the mixin gets included*/
+    &::after {
+        content: "";
+        display: table;
+        /*clears both left and right - doesn't matter which you choose*/
+        clear: both;
+    }
+}

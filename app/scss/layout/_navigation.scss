@@ -1,0 +1,11 @@
+.navigation {
+    padding: 1.5rem;
+    box-shadow: 0 2px 2px 0 rgba($color-black, 0.16), 0 2px 10px 0 rgba($color-black, 0.12);
+    height: 8rem;
+    &__logo-box {
+        width: 5rem;
+        margin-left: 5rem;
+        border: 1px solid $color-black;
+        display: none;
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <base href="/">
+    <title>Redesign</title>
+    <link rel="shortcut icon" type="image/png" href="app/img/dist/SR-Logo-transparent.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="node_modules/uikit/dist/css/uikit-core.min.css">
+    <link rel="stylesheet" href="app/css/main.css">
+</head>
+
+<body>
+    <nav class="navigation uk-navbar-container" uk-navbar uk-sticky="bottom: #offset">
+        <div class="navigation__logo-box">
+            <img src="app/img/dist/SR-Logo-transparent.png" alt="Logo" class="navigation__logo ">
+        </div>
+        <div class="navigation__desktop uk-navbar-center">
+            <ul class="uk-navbar-nav">
+                <li id="index"><a href="index.php">Home</a></li>
+                <li id="training"><a href="training.php" ">Training</a></li>
+                    <li id="plan "><a href="plan.php ">Pläne</a></li>
+                    <li id="profil "><a href="profil.php ">Profil</a></li>
+                    <li id="vermittlung "><a href="vermittlung.php ">Vermittlung</a></li>
+                    <li id="versicherung "><a href="versicherung.php ">Versicherung</a></li>
+                    <li id="mich "><a href="mich.php ">Über mich</a></li>
+                    <li id="kontakt "><a href="kontakt.php ">Kontakt</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    <header class="header ">
+        <div class="header__logo-box ">
+            <img src="app/img/dist/SR-Logo-transparent.png " alt="SR-Sportmanagement Logo " class="header__logo ">
+        </div>
+        <div class="header__text-box ">
+            <h1 class="heading-primary ">
+                <span class="heading-primary--main ">
+                    Sportmanagement
+                </span>
+                <span class="heading-primary--sub ">
+                    "Playing football with your feet is one thing, <br> but playing with your heart is another."
+                    </span>
+                    </h1>
+        </div>
+        </header>
+
+        <!-- JS -->
+        <script src="node_modules/uikit/dist/js/uikit.min.js"></script>
+        <!--<script src="app/js/dist/index-min.js"></script>-->
+        <script data-main="app/js/dist/app.js" src="node_modules/requirejs/require.js"></script>
+</body>
+
+</html>
