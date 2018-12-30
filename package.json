@@ -32,7 +32,6 @@
         "pump": "^3.0.0"
     },
     "dependencies": {
-        "fullpage.js": "^3.0.4",
         "requirejs": "^2.3.6",
         "uikit": "^3.0.0-rc.20"
     }

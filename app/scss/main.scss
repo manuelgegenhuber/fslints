@@ -11,9 +11,12 @@
 
 @import "base/base";
 @import "base/typography";
+@import "base/uikit-fix";
 
 /*components*/
 
+@import "components/bg-video";
+@import "components/story";
 
 /*layout*/
 

@@ -9,12 +9,16 @@
     &--main {
         display: block;
         font-size: 6rem;
-        font-weight: 400;
+        font-weight: 700;
         letter-spacing: 1.5rem;
         /*apply keyfrom*/
         animation-name: moveInLeft;
         animation-duration: 2s;
         animation-timing-function: ease-out;
+        -webkit-text-fill-color: white;
+        /* Will override color (regardless of order) */
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
     }
     &--sub {
         display: block;
@@ -35,6 +39,19 @@
         .uk-navbar-nav>li>a {
             font-size: 14px;
             font-family: $default-font-family;
+        }
+    }
+}
+
+
+/*mobile version!*/
+
+@media screen and (max-width: 960px) {
+    .heading-primary {
+        &--main {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: .6rem;
         }
     }
 }

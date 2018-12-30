@@ -33,12 +33,16 @@ body {
   .heading-primary--main {
     display: block;
     font-size: 6rem;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: 1.5rem;
     /*apply keyfrom*/
     animation-name: moveInLeft;
     animation-duration: 2s;
-    animation-timing-function: ease-out; }
+    animation-timing-function: ease-out;
+    -webkit-text-fill-color: white;
+    /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black; }
   .heading-primary--sub {
     display: block;
     font-size: 1.4rem;
@@ -56,36 +60,132 @@ body {
     font-size: 14px;
     font-family: "Roboto", sans-serif !important; }
 
+/*mobile version!*/
+@media screen and (max-width: 960px) {
+  .heading-primary--main {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: .6rem; } }
+
+.uk-offcanvas-overlay::before {
+  background: rgba(0, 0, 0, 0.5); }
+
 /*components*/
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .6;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 3px;
+  padding: 6rem;
+  font-size: 1.6rem;
+  /*& > * {
+        transform: skewX(12deg);
+    }*/
+  /*&__text {
+                //transform: skew(12deg);
+            }*/ }
+  .story__shape {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    border-radius: 50%;
+    transform: translateX(-3rem);
+    /*skewX(12deg);*/
+    overflow: hidden; }
+  .story__img {
+    height: 100%;
+    transform: scale(1.4);
+    transition: all .5s; }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden; }
+  .story:hover .story__caption {
+    transform: translate(-50%, -50%);
+    opacity: 1; }
+  .story:hover .story__img {
+    -webkit-filter: blur(5px) brightness(85%);
+    -moz-filter: blur(5px) brightness(85%);
+    -o-filter: blur(5px) brightness(85%);
+    -ms-filter: blur(5px) brightness(85%);
+    filter: blur(5px) brightness(85%);
+    transform: scale(1); }
+
+@media screen and (max-width: 640px) {
+  .story__shape {
+    float: none; } }
+
 /*layout*/
 .header {
-  height: 80vh;
+  height: 98vh;
+  width: 98vw;
   /*gradient with "background-image" - left is on top of right parameter*/
-  background-image: linear-gradient(to right bottom, #7ed56fb0, #28b485b2), url(/app/img/dist/hero.jpeg);
   /*gets full image in parent*/
   background-size: cover;
   /*so it sticks to top (good for responsivness)*/
   background-position: top;
   /*cut out bottom right corner of image (x y,x y, x y) - (top left, top right, bottom right, bottom left)*/
-  clip-path: polygon(0 0, 100% 0, 100% 65%, 0 90%);
   /*so the .logo-box's position:absolute references to this container (.header)*/
-  position: relative; }
+  position: relative;
+  margin: 0 auto; }
   .header__logo-box {
-    position: relative;
-    top: 7rem;
-    left: 4rem;
-    border: 1px solid black;
-    display: inline-block;
-    background-color: #fff; }
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block; }
   .header__logo {
-    height: 11rem; }
+    height: 30rem; }
   .header__text-box {
     /*centering container by using position absolute and top left 50% - correct centering with transform*/
     position: absolute;
-    top: 50%;
+    top: 68%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+  .header__icon {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    opacity: .2;
+    color: white;
+    transform: translate(-50%, -50%);
+    animation: opacityBlinking 3s infinite;
+    animation-fill-mode: both; }
+
+@keyframes opacityBlinking {
+  0% {
+    opacity: .0; }
+  50% {
+    opacity: .2; }
+  100% {
+    opacity: .0; } }
 
 .navigation {
   padding: 1.5rem;
@@ -94,8 +194,13 @@ body {
   .navigation__logo-box {
     width: 5rem;
     margin-left: 5rem;
-    border: 1px solid #000;
+    margin-top: 10px;
     display: none; }
+
+#navigation__mobile {
+  background-color: #222;
+  width: 100vw;
+  opacity: 1; }
 
 /*pages*/
 body {

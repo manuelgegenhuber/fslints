@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <base href="/">
-    <title>Redesign</title>
-    <link rel="shortcut icon" type="image/png" href="app/img/dist/SR-Logo-transparent.png">
+    <title>FS Linz</title>
+    <link rel="shortcut icon" type="image/png" href="app/img/dist/Logo.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
 
@@ -17,44 +17,103 @@
 </head>
 
 <body>
-    <nav class="navigation uk-navbar-container" uk-navbar uk-sticky="bottom: #offset">
-        <div class="navigation__logo-box">
-            <img src="app/img/dist/SR-Logo-transparent.png" alt="Logo" class="navigation__logo ">
+    <nav id="navigation__mobile" class="uk-padding-small uk-hidden@m uk-position-fixed uk-position-z-index">
+        <button class=" uk-margin-small-right" style="top: 10px; left: 10px" type="button" uk-toggle="target: #offcanvas-nav-primary" uk-icon="icon: menu; ratio: 2"></button>
+
+
+
+        <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
+            <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+                <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+                <img src="/app/img/dist/Logo.png" class="uk-align-center" width="100px" alt="Fußballschule Linz Logo" />
+
+                <ul class="uk-list uk-list-divider uk-text-uppercase uk-text-large">
+                    <li id="index "><a href="index.php ">Home</a></li>
+                    <li id="training "><a href="training.php " ">Leitfaden</a></li>
+                    <li id="plan "><a href="plan.php ">Trainer</a></li>
+                    <li id="profil "><a href="profil.php ">Teams</a></li>
+                    <li id="vermittlung "><a href="vermittlung.php ">Spielgruppe</a></li>
+                    <li id="versicherung "><a href="versicherung.php ">Kontakt</a></li>
+                </ul>
+
+            </div>
         </div>
-        <div class="navigation__desktop uk-navbar-center">
-            <ul class="uk-navbar-nav">
-                <li id="index"><a href="index.php">Home</a></li>
-                <li id="training"><a href="training.php" ">Training</a></li>
-                    <li id="plan "><a href="plan.php ">Pläne</a></li>
-                    <li id="profil "><a href="profil.php ">Profil</a></li>
-                    <li id="vermittlung "><a href="vermittlung.php ">Vermittlung</a></li>
-                    <li id="versicherung "><a href="versicherung.php ">Versicherung</a></li>
-                    <li id="mich "><a href="mich.php ">Über mich</a></li>
-                    <li id="kontakt "><a href="kontakt.php ">Kontakt</a></li>
+
+    </nav>
+    <!--switch between fixed and uk-position-absolute-->
+
+    <nav id="navigation__desktop " class="uk-visible@m uk-navbar-transparent uk-light uk-position-absolute uk-width-expand uk-position-z-index " uk-navbar>
+        <div class="navigation__logo-box ">
+            <a href="/ ">
+                <img src="app/img/dist/Logo.png " alt="Logo " class="navigation__logo ">
+            </a>
+        </div>
+        <div class="uk-navbar-right uk-margin-large-right ">
+            <ul class="uk-navbar-nav uk-text-uppercase ">
+                <li id="index "><a href="index.php ">Home</a></li>
+                <li id="training "><a href="training.php " ">Leitfaden</a>
+                    </li>
+                    <li id="plan "><a href="plan.php ">Trainer</a></li>
+                    <li id="profil "><a href="profil.php ">Teams</a></li>
+                    <li id="vermittlung "><a href="vermittlung.php ">Spielgruppe</a></li>
+                    <li id="versicherung "><a href="versicherung.php ">Kontakt</a></li>
                 </ul>
             </div>
-        </nav>
+    </nav>
+
+
 
     <header class="header ">
         <div class="header__logo-box ">
-            <img src="app/img/dist/SR-Logo-transparent.png " alt="SR-Sportmanagement Logo " class="header__logo ">
+            <img src="app/img/dist/Logo.png " alt="SR-Sportmanagement Logo " class="header__logo ">
         </div>
+        <div class="bg-video ">
+            <video class="bg-video__content " autoplay muted loop>
+                <source src="/app/img/video.mp4 " type="video/mp4 ">
+                <source src="/app/img/video.webm " type="video/webm ">
+                    Your Browser is not supported!
+            </video>
+        </div>
+
         <div class="header__text-box ">
             <h1 class="heading-primary ">
                 <span class="heading-primary--main ">
-                    Sportmanagement
+                    Fußballschule <br> Linz
                 </span>
-                <span class="heading-primary--sub ">
+                <!--<span class="heading-primary--sub ">
                     "Playing football with your feet is one thing, <br> but playing with your heart is another."
-                    </span>
-                    </h1>
+                    </span>-->
+            </h1>
         </div>
-        </header>
+        <div class="header__icon">
+            <span class="heading-primary--icon" uk-icon="icon: chevron-down;ratio:4"></span>
+        </div>
+    </header>
 
-        <!-- JS -->
-        <script src="node_modules/uikit/dist/js/uikit.min.js"></script>
-        <!--<script src="app/js/dist/index-min.js"></script>-->
-        <script data-main="app/js/dist/app.js" src="node_modules/requirejs/require.js"></script>
+    <section>
+        <div class="story">
+            <figure class="story__shape">
+                <img src="./app/img/dist/nat-8.jpg" class="story__img" alt="Person on a tour">
+                <figcaption class="story__caption">Jack Willson</figcaption>
+            </figure>
+            <div class="story__text">
+                <h2 class="heading-tertiary u-margin-bottom-small">
+                    Jacky Willson
+                </h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, qui? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, ipsum?
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- JS -->
+    <script src="node_modules/uikit/dist/js/uikit.min.js"></script>
+    <script src="node_modules/uikit/dist/js/uikit-icons.min.js"></script>
+    <!--<script src="app/js/dist/index-min.js"></script>-->
+    <script data-main="app/js/dist/app.js" src="node_modules/requirejs/require.js"></script>
 </body>
 
 </html>

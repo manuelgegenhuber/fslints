@@ -5,7 +5,17 @@
     &__logo-box {
         width: 5rem;
         margin-left: 5rem;
-        border: 1px solid $color-black;
+        margin-top: 10px;
+        //border: 1px solid $color-black;
         display: none;
     }
+}
+
+#navigation {
+    &__mobile {
+        background-color: #222;
+        width: 100vw;
+        opacity: 1;
+    }
+    //&__desktop {}
 }
